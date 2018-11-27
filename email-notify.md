@@ -24,25 +24,25 @@
 
 6. ##### Criando banco de dados para o arquivo de senha:
 
-   ```
+   ```shell
    postmap hash:/etc/postfix/sasl_passwd
    ```
 
 7. ##### Proteja o arquivo de senha:
 
-   ```
+   ```shell
    chmod 600 /etc/postfix/sasl_passwd
    ```
 
 8. ##### Editando o arquivo de configuração do Postfix:
 
-   ```
+   ```shell
    nano /etc/postfix/main.cf
    ```
 
-9. ##### Adicione/altere o seguinte (os certificados podem ser encontrados em /etc/ssl/certs/):
+9. ##### Adicione/altere o seguinte: (os certificados podem ser encontrados em /etc/ssl/certs/):
 
-   ```
+   ```shell
    relayhost = smtp.gmail.com:587
    smtp_use_tls = yes
    smtp_sasl_auth_enable = yes
@@ -55,13 +55,12 @@
 
 10. ##### Recarregando as configurações do Postfix:
 
-    ```
+    ```shell
     postfix reload
     ```
 
 ##### Testando:
 
-```
+```shell
 echo "Essa é uma mensagem de teste." | mail -s "Teste" youremail@gmail.com
 ```
-
