@@ -9,7 +9,8 @@
 
 4. Executar o Disk2vhd conforme o print:
 
-    ![image-20260825133649199](C:\Users\vcardoso\AppData\Roaming\Typora\typora-user-images\image-20260825133649199.png)
+   <img width="512" height="406" alt="image-20260825133649199" src="https://github.com/user-attachments/assets/b38d86b8-5ee8-420b-92b3-6eddc5a93a05" />
+
 
 5. Após o arquivo ter sido gerado, vamos envia-lo ao Proxmox, esse processo pode ser feito via WinSCP, ou diretamente pelo scp no PowerShell.
       Por exemplo: `scp file.txt root@192.168.0.1:/directory/file.txt`
