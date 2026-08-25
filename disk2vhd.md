@@ -1,7 +1,8 @@
 ## Convertendo uma máquina física para uma VM utilizando Proxmox
 
-1. Primeiro precisamos criar a VM no Proxmox com os recursos necessários: quantidade de núcleos, memória RAM e um disco temporário de 1GB com a controladora do tipo VirtIO SCSI, garantindo que após instalarmos os drivers Virtio será possível alterar o disco recém convertido para SCSI, pois por padrão ele vem em IDE. 
-   	Outro ponto importante é que PCs com Windows 11 não devemos esquecer o TPM.
+1. Primeiro precisamos criar a VM no Proxmox com os recursos necessários: quantidade de núcleos, memória RAM e um disco temporário de 1GB com a controladora do tipo VirtIO SCSI Single, isso garantirá que após instalarmos os drivers Virtio o Windows reconhecerá essa controladora SCSI, sendo possível alterar o disco .qcow2 recém convertido para SCSI, pois o padrão é IDE. 
+[!NOTE]
+Outro ponto importante é que PCs com Windows 11 não devemos esquecer o TPM.
 
 2. Baixar o Disk2vhd que será responsável por gerar o arquivo VHDX (https://learn.microsoft.com/pt-br/sysinternals/downloads/disk2vhd)
 
