@@ -15,6 +15,9 @@
 
 6. Após o arquivo ter sido gerado, vamos envia-lo ao Proxmox, esse processo pode ser feito via WinSCP, ou diretamente pelo scp no PowerShell.
       Por exemplo: `scp file.txt root@192.168.0.1:/directory/file.txt`
+
+## Os próximos passos deverão ser executados diretamente no servidor Proxmox:
+
 7. Vamos converter o arquivo VHDX para .qcow2 com o comando: `qemu-img convert -f vhdx -O qcow2 ARQUIVO.VHDX ARQUIVO.qcow2`
 8. Carregar o módulo **nbd** para redimensionar o disco qcow2 com exatamente o tamanho que definimos no paço 3.
       Para isso, vamos utilizar alguns comandos, seguindo essa ordem:
